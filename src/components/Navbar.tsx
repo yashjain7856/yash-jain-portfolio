@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,13 +53,13 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.title}
-              href={link.href}
+              to={link.href}
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-200 dark:hover:text-primary transition-colors"
             >
               {link.title}
-            </a>
+            </Link>
           ))}
 
           <div className="ml-4 flex items-center space-x-2">
