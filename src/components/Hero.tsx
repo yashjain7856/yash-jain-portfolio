@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -25,10 +26,10 @@ const Hero = () => {
             
             <div className="flex flex-wrap gap-3">
               <Button asChild className="rounded-full">
-                <a href="#contact">Contact Me</a>
+                <Link to={"#contact"}>Contact Me</Link>
               </Button>
               <Button variant="outline" asChild className="rounded-full">
-                <a href="#projects">View My Work</a>
+                <Link to={"#projects"}>View My Work</Link>
               </Button>
             </div>
             
