@@ -74,14 +74,14 @@ const Hero = () => {
           </div>
         </div>
         
-        <a 
-          href="#about" 
+        <Link
+          to={"#about"} 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-gray-500 dark:text-gray-400"
           aria-label="Scroll down"
         >
           <span className="text-sm mb-1">Scroll Down</span>
           <ArrowDown className="h-5 w-5" />
-        </a>
+        </Link>
       </div>
     </section>
   );
