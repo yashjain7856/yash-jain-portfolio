@@ -8,15 +8,15 @@ const Projects = () => {
   const projects = [
     {
       title: "Layout Generation and Baseline Implementation",
-      description: "Built a transformer model capable of generating document layouts with 80% score on performance metrics using Machine Learning and Computer Vision techniques.",
+      description: "Built a transformer model completely from scratch capable of generating document layouts with 80% score on performance metrics.\nImplemented baseline models for the research paper \"LayoutTransformer: Layout Generation and Completion with Self-attention\"",
       tech: ["Machine Learning", "Python", "Computer Vision", "Transformer Models"],
-      github: "https://github.com/yashjain7856/layout-generation",
+      github: "https://github.com/Layout-Generation/layout-generation",
       live: null,
       stars: 142,
       highlight: true
     },
     {
-      title: "Simulink Variant Manager",
+      title: "Railway Ticket Booking System",
       description: "Developed critical end-to-end features for Simulink Variant Manager in MATLAB R2023b, addressing key requirements from major customers.",
       tech: ["C++", "MATLAB", "OOP", "Design Patterns"],
       github: null,
@@ -45,14 +45,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-container bg-gray-50 dark:bg-navy">
+    <section id="projects" className="section-container">
       <h2 className="section-title">Projects</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className={`border-none shadow-lg hover:shadow-xl transition-all duration-300 ${
+            className={`bg-white dark:bg-navy-dark border-none shadow-lg hover:shadow-xl transition-all duration-300 ${
               project.highlight ? 'border-l-4 border-l-primary' : ''
             }`}
           >
@@ -67,7 +67,7 @@ const Projects = () => {
                 {project.tech.map((tech, idx) => (
                   <span 
                     key={idx} 
-                    className="tech-badge"
+                    className="tech-badge bg-gray-200 dark:bg-navy-light"
                   >
                     {tech}
                   </span>

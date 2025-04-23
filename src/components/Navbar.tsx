@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './themeToggle';
 
 
 const Navbar = () => {
@@ -70,6 +71,7 @@ const Navbar = () => {
               </Button>
             ))}
           </div>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -108,6 +110,7 @@ const Navbar = () => {
                 </Button>
               ))}
             </div>
+            <ThemeToggle />
           </div>
         </nav>
       )}

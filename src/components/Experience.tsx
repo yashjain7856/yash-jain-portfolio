@@ -45,13 +45,13 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-container bg-gray-50 dark:bg-navy">
+    <section id="experience" className="section-container">
       <div className="max-w-4xl mx-auto">
         <h2 className="section-title">Work Experience</h2>
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl bg-white dark:bg-navy-dark transition-all duration-300">
               <CardHeader className="pb-2">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
                   <div>

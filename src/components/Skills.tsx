@@ -62,7 +62,7 @@ const Skills = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {skillCategories.map((category, index) => (
-          <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
+          <Card key={index} className="border-none bg-white dark:bg-navy-dark shadow-lg hover:shadow-xl transition-all duration-300">
             <CardContent className="p-6">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-gray-100 dark:bg-navy rounded-full mr-3">
@@ -73,10 +73,7 @@ const Skills = () => {
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
-                  <span 
-                    key={idx} 
-                    className="tech-badge"
-                  >
+                  <span key={idx} className="tech-badge bg-gray-200 dark:bg-navy-light">
                     {skill}
                   </span>
                 ))}

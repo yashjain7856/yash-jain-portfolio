@@ -56,7 +56,7 @@ const About = () => {
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
         {stats.map((stat, index) => (
-          <Card key={index} className="border-none shadow-lg bg-white dark:bg-navy-light hover:shadow-xl transition-shadow">
+          <Card key={index} className="border-none shadow-lg bg-white dark:bg-navy-dark hover:shadow-xl transition-shadow">
             <CardContent className="p-6 flex flex-col items-center text-center">
               <div className="mb-4 p-3 bg-gray-100 dark:bg-navy rounded-full">
                 {stat.icon}
