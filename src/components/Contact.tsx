@@ -64,7 +64,7 @@ const Contact = () => {
           
           <div className="space-y-4">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="border-none shadow-sm bg-white dark:bg-navy-dark">
+              <Card key={index} className="card-container">
                 <CardContent className="p-4 flex items-center">
                   <div className="p-2 bg-primary/10 rounded-full mr-4">
                     {info.icon}
@@ -91,7 +91,7 @@ const Contact = () => {
         </div>
         
         <div>
-          <Card className="border-none shadow-lg bg-white dark:bg-navy-dark">
+          <Card className="card-container">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
