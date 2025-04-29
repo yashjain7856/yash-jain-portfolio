@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             
             <p className="text-gray-600 dark:text-gray-300 text-lg md:pr-10">
-              Specialized in C++, MATLAB, and Machine Learning with a passion for solving complex engineering problems and building efficient software solutions.
+              Specialized in backend development in C++, MATLAB, and Machine Learning with a passion for solving complex engineering problems and building efficient software solutions.
             </p>
             
             <div className="flex flex-wrap gap-3">

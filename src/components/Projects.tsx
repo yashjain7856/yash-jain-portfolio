@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Star } from 'lucide-react';
 import { projects } from "@/data/projectsData";
+import ReactMarkdown from "react-markdown";
 
 const Projects = () => {
   return (
@@ -17,9 +18,27 @@ const Projects = () => {
             className="card-container">
             <CardHeader>
               <CardTitle className="text-xl text-navy-dark dark:text-white">{project.title}</CardTitle>
-              <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
-                {project.description}
-              </CardDescription>
+
+            <CardDescription className="text-gray-600 dark:text-gray-300 mt-2">
+              <ul className="list-disc pl-4 space-y-1">
+                {project.description.map((point, idx) => (
+                  <li key={idx} className="text-sm leading-snug marker:text-gray-500">
+                    <ReactMarkdown
+                      components={{
+                        p: ({ node, ...props }) => <>{props.children}</>,
+                        strong: ({ node, ...props }) => <strong className="font-semibold" {...props} />,
+                        em: ({ node, ...props }) => <em className="italic" {...props} />,
+                      }}
+                    >
+                      {point}
+                    </ReactMarkdown>
+                  </li>
+                ))}
+              </ul>
+            </CardDescription>
+
+
+  
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2 mb-4">
